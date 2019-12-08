@@ -37,8 +37,8 @@ function Counter() {
     return (
       <div>
         <h3>Page : {count}</h3>
-         <a className="pagination-previous" onClick={minusCount}>Previous</a>
-         <a className="pagination-next" onClick={plusCount}>Next page</a>
+         <span className="pagination-previous" onClick={minusCount}>Previous</span>
+         <span className="pagination-next" onClick={plusCount}>Next page</span>
          {/* <h3>Name : {name}</h3>
          <h3>id : {id}</h3>
          <h3>Select : {pokemon}</h3> */}

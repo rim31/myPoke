@@ -31,9 +31,9 @@ return (
         </div>
         <div><strong>Stats : </strong>
             {details ? details.stats.map((item,i) => 
-            <div>
-                <progress key={i} className="progress is-small is-primary" value={item.base_stat} max="200">{item.base_stat}</progress>
-                <div key={i}>{item.stat.name+'  : '+ item.base_stat}</div>
+            <div key={i}>
+                <progress key={item.base_stat+i} className="progress is-small is-primary" value={item.base_stat} max="200">{item.base_stat}</progress>
+                <div key={item.stat.name+i}>{item.stat.name+'  : '+ item.base_stat}</div>
             </div>
             ):''}
         </div>

@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+// import { storiesOf } from '@storybook/react';
+// import { action } from '@storybook/addon-actions';
 
   const INITIAL_STATE = {
     name:"oseng",
