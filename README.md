@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 MyPokedex : React - (not redux yet)
 
-![alt text](https://raw.githubusercontent.com/rim31/myPoke/master/pokedex.png)
+![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png)
 
 
 - pagination
