@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import Chip from '@material-ui/core/Chip';
 
 function Favoris() {
-    const {details, favoris} = useSelector(state => ({
+    const { favoris} = useSelector(state => ({
         ...state.nameReducer,
         ...state.detailsReducer,
         ...state.displayReducer,
