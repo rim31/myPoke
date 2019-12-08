@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import Grid from './Grid.js';
+import Grid from '../containers/Grid.jsners/Grid.js';
 // import Button from '@material-ui/core/Button';
 import {createStore, combineReducers} from 'redux';
 import {Provider, useSelector, useDispatch} from 'react-redux';
