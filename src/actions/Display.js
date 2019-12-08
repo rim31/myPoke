@@ -1,6 +1,7 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import CardActions from '@material-ui/core/CardActions';
+import Badge from '@material-ui/core/Badge';
 
 
 function Display() {
@@ -75,17 +76,16 @@ function Display() {
           </div>
           <CardActions>
             {/* boutton d'ajout de favoris */}
-            <button className="button" size="small"  variant="outlined"  onClick={() => {handleFavorite(pokemon)}}>
-            Like   .
-              <span class="icon has-text-info">
-                <i class="fas fa-heart"></i>
-              </span>
-            </button>
+            <Badge color="primary" badgeContent={(favoris).length} className="">
+              <button className="button" size="small"  variant="outlined"  onClick={() => {handleFavorite(pokemon)}}>
+              Like   .
+                <span class="icon has-text-info">
+                  <i class="fas fa-heart"></i>
+                </span>
+              </button>
+            </Badge>
 
           </CardActions>
-          <div>
-            {favoris.length} Favoris
-          </div>
         </div>
   )
 }

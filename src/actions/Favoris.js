@@ -1,8 +1,6 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Chip from '@material-ui/core/Chip';
-// import Badge from '@material-ui/core/Badge';
-// import Button from '@material-ui/core/Button';
 
 function Favoris() {
     const {details, favoris} = useSelector(state => ({
@@ -34,19 +32,12 @@ function Favoris() {
     sendtoReducer(myArray)
   }
     //   console.log("DETAILS");
-      console.table(details?details:"rien");
+    //   console.table(details?details:"rien");
     //   console.table(details?details.base_experience:"- xp");
     //   console.table(pokemons);
 return (
     <>
-      {/* <Badge color="primary" badgeContent={(favoris).length} className="">
-        <Button variant="contained">
-            <span class="icon has-text-info">
-                <i class="fas fa-heart"></i>
-            </span>
-        </Button>
-      </Badge> */}
-      <div className="subtitle" ><strong>Favoris :</strong> </div>
+      <div className="subtitle" ><strong>{favoris.length} : Favorites</strong> </div>
         {favoris.map((item,i) => <Chip key={i} label={item} onDelete={() => {handleDelete(item)}} />)}
     </>
     )
