@@ -20,20 +20,20 @@ return (
         <span className="subtitle" ><strong>Details :</strong> </span>
         <div>Types : 
             {details ? details.types.map((item,i) => 
-            <span class="tag is-info is-light" key={i}>{item.type.name}</span>): ''}
+            <span className="tag is-info is-light" key={i}>{item.type.name}</span>): ''}
         </div>
         <div>{details ? details.weight+' lbs': 'weight'}</div>
         <div>{details ? details.base_experience+' exp': 'exp'}</div>
-        <progress class="progress is-small is-link" value={details ? details.base_experience: 0} max="500"></progress>
+        <progress className="progress is-small is-link" value={details ? details.base_experience: 0} max="500"></progress>
         <div>Abilities : 
             {details ? details.abilities.map((item,i) => 
-            <span class="tag is-info is-light is-danger" key={i}>{item.ability.name}</span>): ''}
+            <span className="tag is-info is-light is-danger" key={i}>{item.ability.name}</span>): ''}
         </div>
         <div><strong>Stats : </strong>
             {details ? details.stats.map((item,i) => 
             <div>
-                <progress className="progress" class="progress is-small is-primary" value={item.base_stat} max="200">{item.base_stat}</progress>
-                <div>{item.stat.name+'  : '+ item.base_stat}</div>
+                <progress key={i} className="progress is-small is-primary" value={item.base_stat} max="200">{item.base_stat}</progress>
+                <div key={i}>{item.stat.name+'  : '+ item.base_stat}</div>
             </div>
             ):''}
         </div>

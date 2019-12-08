@@ -79,8 +79,8 @@ function Display() {
             <Badge color="primary" badgeContent={(favoris).length} className="">
               <button className="button" size="small"  variant="outlined"  onClick={() => {handleFavorite(pokemon)}}>
               Like   .
-                <span class="icon has-text-info">
-                  <i class="fas fa-heart"></i>
+                <span className="icon has-text-info">
+                  <i className="fas fa-heart"></i>
                 </span>
               </button>
             </Badge>

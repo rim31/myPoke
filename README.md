@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-MyPokedex : React - (redux hook)
+# MyPokedex : React - (redux hook)
 
-![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png)
-
+Use the API : https://pokeapi.co/
+to display select and save favorites pokemons : 
 
 - pagination
 - like dislike pokemon
@@ -11,6 +11,8 @@ MyPokedex : React - (redux hook)
 
 - search in progress
 
+
+![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png)
 
 
 ### TO DO :
@@ -34,6 +36,20 @@ You will also see any lint errors in the console.
 
 ### Memo
 
+#### Provider and createStore :
+in index.js
+```
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+
+  const INITIAL_STATE = {
+    ..,..
+  };
+
+  const store = createStore(rootReducer, INITIAL_STATE);
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+```
 
 #### get data from store : useSelector
 

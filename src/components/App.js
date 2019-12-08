@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import {createStore, combineReducers} from 'redux';
-import {Provider} from 'react-redux';
 import nameReducer from '../reducers/nameReducer';
 import getpokemonsReducer from '../reducers/getpokemonsReducer';
 import counterReducer from '../reducers/counterReducer';
@@ -45,30 +44,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Provider store={store}>
-          <nav>
-            <Name />
-          </nav>
-          <div class="columns">
-          <div class="column is-two-thirds">
-              <Counter />
-              <Selector pokemons={store.pokemons} page={store.count}  />
-            </div>
-            <div class="column auto">
-              <Getpokemons />
-              <div class="columns">
-                <div class="column is-one-half">
-                  <Display />
-                  <Details />
-                  <Favoris /> 
-                </div>
+        <nav>
+          <Name />
+        </nav>
+        <div className="columns">
+        <div className="column is-two-thirds">
+            <Counter />
+            <Selector pokemons={store.pokemons} page={store.count}  />
+          </div>
+          <div className="column auto">
+            <Getpokemons />
+            <div className="columns">
+              <div className="column is-one-half">
+                <Display />
+                <Details />
+                <Favoris /> 
               </div>
             </div>
           </div>
-        </ Provider>
-
-        
-    </div>
+        </div>        
+      </div>
     );
   }
 }

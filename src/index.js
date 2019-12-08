@@ -7,8 +7,6 @@ import rootReducer from './reducers';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
-
-
   const INITIAL_STATE = {
     name:"oseng",
     pokemons:[],
