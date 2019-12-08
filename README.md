@@ -1,22 +1,68 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-MyPokedex : React - (not redux yet)
+MyPokedex : React - (redux hook)
 
 ![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png)
 
 
 - pagination
 - like dislike pokemon
-- display detail in 3D
+- display details and 3D model
 
-https://www.youtube.com/watch?v=8aGhZQkoFbQ
+- search in progress
 
-https://www.youtube.com/watch?v=8xoEpnmhxnk
-https://codesandbox.io/s/starting-redux-code-jflld
-https://codesandbox.io/s/final-redux-code-dhbuc
+
+
+#### get data from store : useSelector
+‘‘‘
+    const {details} = useSelector(state => ({
+        ...state.nameReducer,
+        ...state.detailsReducer,
+        ...state.displayReducer,
+        ...state.selectorReducer,
+      }));
+‘‘‘
+#### mapPropstoState : useDispatch
+
+‘‘‘
+    const dispatch = useDispatch();
+
+    //mapDispatch : useDispatch
+    function plusCount() {
+      dispatch({
+        type : "PLUS_COUNT",
+        payload: {data: datum}
+      })
+    }
+‘‘‘
+
+#### componentDidMount : useEffect
+
+‘‘‘
+  async function fetchData() {
+    var pokemons = [];
+    const res = await  fetch("https://pokeapi.co/api/v2/pokemon/?limit=964");
+
+    res
+      .json()
+      .then( res => {pokemons = (res.results)})
+      .then( () => getAll(pokemons))
+      .catch(err => console.log(err));
+    }
+
+// useEffect remplace componentDidMount
+    useEffect(() => {
+      fetchData();
+    }, []) // [], permet d'eviter une continelle fectch des data, pour se comporter comme componentDidMount
+
+‘‘‘
+
 
 ### TO DO :
 https://www.youtube.com/watch?v=JvHB7XZUqO0&list=PLiKs97d-BatHEeclprFtCaw8RcNOYXUqN&index=2
+
+
+
 
 ## Available Scripts
 
@@ -86,3 +132,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+#### Aide
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+https://www.youtube.com/watch?v=8xoEpnmhxnk
+https://codesandbox.io/s/starting-redux-code-jflld
+https://codesandbox.io/s/final-redux-code-dhbuc
