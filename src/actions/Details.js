@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 
 
 function Detail() {
-    const {details, favoris} = useSelector(state => ({
+    const {details} = useSelector(state => ({
         ...state.nameReducer,
         ...state.detailsReducer,
         ...state.displayReducer,

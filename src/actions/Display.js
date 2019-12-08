@@ -43,19 +43,6 @@ function Display() {
       }
       sendtoReducer(out);
     }
-
-  }
-
-   // suppression de pokemon favoris
-   function handleDelete(pokemon) {
-    var myArray = favoris;
-
-    //suppression du pokemon : on supprime du tableau en fonction de l'index trouvé
-    let index = myArray.indexOf(pokemon);
-    if (index > -1) {
-      myArray.splice(index, 1);
-    } 
-    sendtoReducer(myArray)
   }
 
 
@@ -66,7 +53,7 @@ function Display() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       console.log(data.abilities[0].ability.name);
     })
     .catch(err => console.log(err));
