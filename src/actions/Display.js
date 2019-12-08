@@ -1,7 +1,5 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import Card from '@material-ui/core/Card';
-import Chip from '@material-ui/core/Chip';
 import CardActions from '@material-ui/core/CardActions';
 
 
@@ -79,7 +77,6 @@ function Display() {
   var res;
   return (
     <div>
-        <Card cellHeight={99} className="gridList">
           <figure className="image is-5by4">
             <img className="displayPokemon" src={urlGIF + pokemon + '.gif'} alt={pokemon} onChange={(res) => {getdetail(id, pokemon)}} />
           </figure>
@@ -102,10 +99,7 @@ function Display() {
           <div>
             {favoris.length} Favoris
           </div>
-          {/* liste des favoris supprimable */}
-        </Card>
-          {favoris.map((item,i) => <Chip key={i} label={item} onDelete={() => {handleDelete(item)}} />)}
-    </div>
+        </div>
   )
 }
 export default Display;

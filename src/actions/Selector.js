@@ -47,9 +47,10 @@ function Selector() {
       <GridList cellHeight={160} cols={3} className="gridList">
         {/* {pokemons.map(((tile, key) => */}
         {tileData.map(((tile, key) =>
-          <GridListTile key={tile.name} onClick={() => {choose(key+(20*count)+1, tile.name)}} >
+          <GridListTile className="imageGrid" key={tile.name} onClick={() => {choose(key+(20*count)+1, tile.name)}} >
             <img src={urlPNG + (key+(20*count)+1) + '.png'} alt={tile.name} />
             <GridListTileBar
+              className="herosCard"
               title={tile.name}
               subtitle={<span>n°: {key+(20*count)+1}</span>}
               style={{ height: '2.5rem' }}

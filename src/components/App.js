@@ -13,6 +13,7 @@ import Getpokemons from '../actions/Getpokemons';
 import Selector from '../actions/Selector';
 import Display from '../actions/Display';
 import Details from '../actions/Details';
+import Favoris from '../actions/Favoris';
 
 
 // ===== combine reducer =====
@@ -58,7 +59,8 @@ class App extends Component {
               <div class="columns">
                 <div class="column is-one-half">
                   <Display />
-                  <Details   style={{position: "sticky", top:'0'}}/>
+                  <Details />
+                  <Favoris /> 
                 </div>
               </div>
             </div>

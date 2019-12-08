@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 
 
 function Detail() {
-    const {details} = useSelector(state => ({
+    const {details, favoris} = useSelector(state => ({
         ...state.nameReducer,
         ...state.detailsReducer,
         ...state.displayReducer,
@@ -14,19 +14,28 @@ function Detail() {
     //   console.table(details?details.abilities[0].ability.name:"rien");
     //   console.table(details?details.base_experience:"- xp");
     //   console.table(pokemons);
+    //   console.table(details);
 return (
     <>
-        <h5>DETAILS </h5>
+        <span className="subtitle" ><strong>Details :</strong> </span>
+        <div>Types : 
+            {details ? details.types.map((item,i) => 
+            <span class="tag is-info is-light" key={i}>{item.type.name}</span>): ''}
+        </div>
         <div>{details ? details.weight+' lbs': 'weight'}</div>
         <div>{details ? details.base_experience+' exp': 'exp'}</div>
-        <progress class="progress is-small is-primary" value={details ? details.base_experience: 0} max="500"></progress>
+        <progress class="progress is-small is-link" value={details ? details.base_experience: 0} max="500"></progress>
         <div>Abilities : 
             {details ? details.abilities.map((item,i) => 
             <span class="tag is-info is-light is-danger" key={i}>{item.ability.name}</span>): ''}
         </div>
-        <div>Types : 
-            {details ? details.types.map((item,i) => 
-            <span class="tag is-info is-light" key={i}>{item.type.name}</span>): ''}
+        <div><strong>Stats : </strong>
+            {details ? details.stats.map((item,i) => 
+            <div>
+                <progress className="progress" class="progress is-small is-primary" value={item.base_stat} max="200">{item.base_stat}</progress>
+                <div>{item.stat.name+'  : '+ item.base_stat}</div>
+            </div>
+            ):''}
         </div>
     </>
     )
