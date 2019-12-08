@@ -14,14 +14,16 @@ MyPokedex : React - (redux hook)
 
 
 #### get data from store : useSelector
-‘‘‘
-    const {details} = useSelector(state => ({
+
+```
+const {details} = useSelector(state => ({
         ...state.nameReducer,
         ...state.detailsReducer,
         ...state.displayReducer,
         ...state.selectorReducer,
       }));
-‘‘‘
+```
+
 #### mapPropstoState : useDispatch
 
 ‘‘‘
