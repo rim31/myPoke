@@ -26,7 +26,7 @@ const {details} = useSelector(state => ({
 
 #### mapPropstoState : useDispatch
 
-‘‘‘
+```
     const dispatch = useDispatch();
 
     //mapDispatch : useDispatch
@@ -36,11 +36,11 @@ const {details} = useSelector(state => ({
         payload: {data: datum}
       })
     }
-‘‘‘
+```
 
 #### componentDidMount : useEffect
 
-‘‘‘
+```
   async function fetchData() {
     var pokemons = [];
     const res = await  fetch("https://pokeapi.co/api/v2/pokemon/?limit=964");
@@ -57,7 +57,7 @@ const {details} = useSelector(state => ({
       fetchData();
     }, []) // [], permet d'eviter une continelle fectch des data, pour se comporter comme componentDidMount
 
-‘‘‘
+```
 
 
 ### TO DO :
@@ -137,6 +137,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 #### Aide
+counter : 
+https://www.youtube.com/watch?v=3zoIigieur0
+
 https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
 https://www.youtube.com/watch?v=8xoEpnmhxnk
