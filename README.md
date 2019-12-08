@@ -41,6 +41,8 @@ npx -p @storybook/cli sb init --type react
 npm install @storybook/react --save-dev
 ```
 
+https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/
+
 ### Memo
 
 #### Provider and createStore :
