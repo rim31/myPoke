@@ -28,7 +28,7 @@ function Name() {
         //   defaultValue="Pokemon"
           margin="normal"
           onChange={handleUpdateName}
-          placeholder='not working yet'
+          placeholder='pokemon'
         />
           </div>
           <Typography className="title" variant="h4">
