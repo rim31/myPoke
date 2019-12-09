@@ -5,11 +5,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Use the API : https://pokeapi.co/
 to display select and save favorites pokemons : 
 
-- pagination
-- like dislike pokemon
+- pagination OK
+- search bar OK
+- like dislike pokemon OK
 - display details and 3D model
-
-- search in progress
 
 
 <!-- ![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png) -->
