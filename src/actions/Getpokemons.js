@@ -25,9 +25,11 @@ function Getpokemons() {
       .then( () => getAll(pokemons))
       .catch(err => console.log(err));
     }
-// useEffect remplace componentDidMount
+
+    // useEffect remplace componentDidMount
     useEffect(() => {
       fetchData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []) // [], permet d'eviter une continelle fectch des data, pour se comporter comme componentDidMount
 
 

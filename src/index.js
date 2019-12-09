@@ -3,19 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import rootReducer from './reducers';
+import combineReducers from './reducers';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 // import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
 
   const INITIAL_STATE = {
-    name:"oseng",
-    pokemons:[],
-    select:"pikachu"
+    // name:"oseng",
+    // pokemons:[],
+    // select:"pikachu"
   };
 
-  const store = createStore(rootReducer, INITIAL_STATE);
+  const store = createStore(combineReducers, INITIAL_STATE);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

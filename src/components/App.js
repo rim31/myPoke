@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import {createStore} from 'redux';
-import combineReducers from '../reducers';
+// import {createStore} from 'redux';
+// import combineReducers from '../reducers';
 import Counter from '../actions/Counter';
 import Name from '../actions/Name';
 import Getpokemons from '../actions/Getpokemons';
@@ -21,18 +21,18 @@ import Favoris from '../actions/Favoris';
 // });
 
 // ========== STATE =========
-  const INITIAL_STATE = {
-    name:"oseng",
-    pokemons:[],
-    select:"pikachu", 
-    id:0,
-    data:[],
-    favoris:[]
-  };
+  // const INITIAL_STATE = {
+  //   name:"oseng",
+  //   pokemons:[],
+  //   select:"pikachu", 
+  //   id:0,
+  //   data:[],
+  //   favoris:[]
+  // };
 
 
 // ============ createStore ============
-const store = createStore(combineReducers, INITIAL_STATE);
+// const store = createStore(combineReducers, INITIAL_STATE);
 
   
 class App extends Component {
@@ -46,7 +46,7 @@ class App extends Component {
         <div className="columns">
         <div className="column is-two-thirds">
             <Counter />
-            <Selector pokemons={store.pokemons} page={store.count}  />
+            <Selector />
           </div>
           <div className="column auto">
             <Getpokemons />
