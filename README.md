@@ -12,7 +12,8 @@ to display select and save favorites pokemons :
 - search in progress
 
 
-![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png)
+<!-- ![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.png) -->
+![alt text](https://github.com/rim31/myPoke/blob/master/pokedex.gif)
 
 
 ### TO DO :
