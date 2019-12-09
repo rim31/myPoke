@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import {createStore, combineReducers} from 'redux';
-import nameReducer from '../reducers/nameReducer';
-import getpokemonsReducer from '../reducers/getpokemonsReducer';
-import counterReducer from '../reducers/counterReducer';
-import selectorReducer from '../reducers/selectorReducer';
-import displayReducer from '../reducers/displayReducer';
+import {createStore} from 'redux';
+import combineReducers from '../reducers';
 import Counter from '../actions/Counter';
 import Name from '../actions/Name';
 import Getpokemons from '../actions/Getpokemons';
@@ -15,14 +11,14 @@ import Details from '../actions/Details';
 import Favoris from '../actions/Favoris';
 
 
-// ===== combine reducer =====
-const rootReducer = combineReducers({
-  counterReducer, 
-  nameReducer,
-  getpokemonsReducer,
-  selectorReducer,
-  displayReducer
-});
+// ===== combine reducer  in /reducers/index.js=====
+// const rootReducer = combineReducers({
+//   counterReducer, 
+//   nameReducer,
+//   getpokemonsReducer,
+//   selectorReducer,
+//   displayReducer
+// });
 
 // ========== STATE =========
   const INITIAL_STATE = {
@@ -36,7 +32,7 @@ const rootReducer = combineReducers({
 
 
 // ============ createStore ============
-const store = createStore(rootReducer, INITIAL_STATE);
+const store = createStore(combineReducers, INITIAL_STATE);
 
   
 class App extends Component {
