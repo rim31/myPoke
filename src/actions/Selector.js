@@ -74,7 +74,8 @@ function Selector() {
             <GridListTileBar
               className="herosCard"
               title={tile.name}
-              subtitle={<span>n°: {key+(20*count)+1}</span>}
+              // subtitle={<span>n°: {key+(20*count)+1}</span>}
+              subtitle={<span>n°: {parseUrl(tile.url)}</span>}
               style={{ height: '2.5rem' }}
             />
           </GridListTile>
