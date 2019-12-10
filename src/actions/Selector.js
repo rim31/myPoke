@@ -64,6 +64,7 @@ function Selector() {
 
   return (
     <div>
+        <h3>{tileData.length} pokemons in this page</h3>
       <GridList cellHeight={160} cols={3} className="gridList">
         {/* {pokemons.map(((tile, key) => */}
         {tileData.map(((tile, key) =>
