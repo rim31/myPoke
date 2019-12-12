@@ -174,3 +174,6 @@ https://www.youtube.com/watch?v=8aGhZQkoFbQ
 https://www.youtube.com/watch?v=8xoEpnmhxnk
 https://codesandbox.io/s/starting-redux-code-jflld
 https://codesandbox.io/s/final-redux-code-dhbuc
+
+image loading :
+https://codeburst.io/how-to-do-simple-progressive-image-loading-in-react-like-medium-dfad4c181b53

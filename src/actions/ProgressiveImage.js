@@ -28,12 +28,8 @@ export default class ProgressiveImage extends Component {
 			<span>
 				<img
 					{...filteredProps}
-					onLoad={() => {
-						this.setState({ highResImageLoaded: true });
-					}}
-					ref={img => {
-						this.highResImage = img;
-					}}
+					onLoad={() => {this.setState({ highResImageLoaded: true });}}
+					ref={img => {this.highResImage = img;}}
 					src={this.props.src}
 					alt="poke"
 				/>
