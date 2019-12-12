@@ -2,6 +2,7 @@ import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import CardActions from '@material-ui/core/CardActions';
 import Badge from '@material-ui/core/Badge';
+import ProgressiveImage from './ProgressiveImage';
 
 
 function Display() {
@@ -66,7 +67,8 @@ function Display() {
   return (
     <div>
           <figure className="image is-5by4">
-            <img className="displayPokemon" src={urlGIF + pokemon + '.gif'} alt={pokemon} onChange={(res) => {getdetail(id, pokemon)}} />
+            {/* <img className="displayPokemon" src={urlGIF + pokemon + '.gif'} alt={pokemon} onChange={(res) => {getdetail(id, pokemon)}} /> */}
+            <ProgressiveImage src={urlGIF + pokemon + '.gif'} alt={pokemon} onChange={(res) => {getdetail(id, pokemon)}} />
           </figure>
           <div>
             <span>n° {id} - {pokemon}</span>
